@@ -1,0 +1,2 @@
+class Dispocode < ApplicationRecord
+end

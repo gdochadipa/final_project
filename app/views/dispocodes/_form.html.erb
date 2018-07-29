@@ -1,0 +1,22 @@
+<%= form_with(model: dispocode, local: true) do |form| %>
+  <% if dispocode.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(dispocode.errors.count, "error") %> prohibited this dispocode from being saved:</h2>
+
+      <ul>
+      <% dispocode.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :dispo_title %>
+    <%= form.text_area :dispo_title %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

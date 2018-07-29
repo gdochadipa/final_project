@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Inmails</h1>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>From</th>
+      <th>To</th>
+      <th>Datecoming</th>
+      <th>Mailtext</th>
+      <th>Response</th>
+      <th>Dispo</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @inmails.each do |inmail| %>
+      <tr>
+        <td><%= inmail.title %></td>
+        <td><%= inmail.from %></td>
+        <td><%= inmail.to %></td>
+        <td><%= inmail.datecoming %></td>
+        <td><%= inmail.mailtext %></td>
+        <td><%= inmail.response %></td>
+        <td><%= inmail.dispo_id %></td>
+        <td><%= link_to 'Show', inmail %></td>
+        <td><%= link_to 'Edit', edit_inmail_path(inmail) %></td>
+        <td><%= link_to 'Destroy', inmail, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to  "Disposisi", new_dispositon_path %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Inmail', new_inmail_path %>

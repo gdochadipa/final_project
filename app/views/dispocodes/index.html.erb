@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Dispocodes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Dispo title</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @dispocodes.each do |dispocode| %>
+      <tr>
+        <td><%= dispocode.dispo_title %></td>
+        <td><%= link_to 'Show', dispocode %></td>
+        <td><%= link_to 'Edit', edit_dispocode_path(dispocode) %></td>
+        <td><%= link_to 'Destroy', dispocode, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Dispocode', new_dispocode_path %>

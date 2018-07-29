@@ -1,0 +1,47 @@
+<%= form_with(model: dispositon, local: true) do |form| %>
+  <% if dispositon.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(dispositon.errors.count, "error") %> prohibited this dispositon from being saved:</h2>
+
+      <ul>
+      <% dispositon.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :dispocode %>
+    <%= form.text_area :dispocode %>
+  </div>
+
+  <div class="field">
+    <%= form.label :inmail_id %>
+    <%= form.number_field :inmail_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :to %>
+    <%= form.text_area :to %>
+  </div>
+
+  <div class="field">
+    <%= form.label :comment %>
+    <%= form.text_area :comment %>
+  </div>
+
+  <div class="field">
+    <%= form.label :status %>
+    <%= form.text_area :status %>
+  </div>
+
+  <div class="field">
+    <%= form.label :user_id %>
+    <%= form.number_field :user_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

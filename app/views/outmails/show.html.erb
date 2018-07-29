@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @outmail.title %>
+</p>
+
+<p>
+  <strong>To:</strong>
+  <%= @outmail.to %>
+</p>
+
+<p>
+  <strong>Datesend:</strong>
+  <%= @outmail.datesend %>
+</p>
+
+<p>
+  <strong>Mailtext:</strong>
+  <%= @outmail.mailtext %>
+</p>
+
+<p>
+  <strong>Response:</strong>
+  <%= @outmail.response %>
+</p>
+
+<%= link_to 'Edit', edit_outmail_path(@outmail) %> |
+<%= link_to 'Back', outmails_path %>

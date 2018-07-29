@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  dispocode: MyText
+  inmail_id: 1
+  to: MyText
+  comment: MyText
+  status: MyText
+  user_id: 1
+
+two:
+  dispocode: MyText
+  inmail_id: 1
+  to: MyText
+  comment: MyText
+  status: MyText
+  user_id: 1
